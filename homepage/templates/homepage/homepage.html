@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Cook With Abhi
+{% endblock %}
+
+{%block css_link%}
+    <link rel="stylesheet" href="../../static/homepage/homepage.css">
+{%endblock%}
+
+{% block logo %}
+"homepage/website-logo.jpg"
+{% endblock %}
+
+{% block content%}
+<div class="intro">
+    <div id="quote-image">
+        <img style="height: 90%; width: 98%;" src="../../static/homepage/img_quote.jpg" alt="img">
+        <h2 id="quote">Stressed Out? Pick a recipe <br> and treat yourself to a delicious treat</h2>
+    </div>
+
+    <div id="pics">
+        <img class="picz" style="width: 100%; height: 95%;" src="../../static/homepage/img1.jpg" alt="img">
+        <img class="picz" style="width: 100%; height: 95%;" src="../../static/homepage/img2.jpg" alt="img">
+    </div>
+</div>
+
+<div>
+    <h1>My Specialities</h1>
+    <div style="width: 100%;" id="food">
+        {% for recipe in recipes %}
+            <div id="individual_recipe">
+                <a style="text-decoration: none;" href="menu/{{recipe.slug}}"><h2 style="color: white; padding-left: 5px;">{{recipe.title}}</h2></a>
+                <a href="menu/{{recipe.slug}}"><img style="height: 180px; width: 300px; object-fit: cover;" src="../../../media/{{recipe.header_image}}" alt="img"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div>
+    <h1>My Favourite Blogs</h1>
+    <div id="blog">
+        {% for blog in blogs %}
+            <div id="individual_blog">
+                <a style="text-decoration: none;" href="blog/{{blog.slug}}"><h2 style="grid-area: title; color: white;">{{blog.title}}</h2></a>
+                <h4 style="grid-area: summary;">{{blog.excerpt}}</h4>
+                <a href="blog/{{blog.slug}}"><img style="height: 180px; width: 300px; object-fit: cover; grid-area: image;" src="../../../media/{{blog.blog_image}}" alt="img"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,12 @@
+.social_media a img{
+    height: 200px;
+    width: 200px;
+}
+
+#biodata{
+    grid-template-areas: 
+    "img info work work"
+    "img ed hob hob"
+    "img cook cook cook"
+    "img sm sm sm";
+} 

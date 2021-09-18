@@ -1,0 +1,34 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/base.css">
+    <link rel="shortcut icon" type="image/png" href="{% static '../static/favicon.ico' %}"/>
+    {%block css_link%}{%endblock%}
+</head>
+<body>
+    <div class="contact-me">
+        <h2>Contact Me : abhishantgautam10@gmail.com</h2>
+    </div>
+
+    <div style="display: grid;" class="toolbar">
+        <a href="{% url 'homepage' %}"><img style="grid-area: img;" src= "{% static '../static/website-logo.jpg' %}" alt="img"></a>
+        <h3 style="grid-area: home;"><a style="color: white; text-decoration: none;" href="{% url 'homepage' %}">Home</a></h3>
+        <h3 style="grid-area: blogs;"><a style="color: white; text-decoration: none;" href="{% url 'blog_homepage' %}">Blogs</a></h3>
+        <h3 style="grid-area: menu;"><a style="color: white; text-decoration: none;" href="{% url 'menu_page' %}">Menu</a></h3>
+        <h3 style="grid-area: aboutcook;"><a style="color: white; text-decoration: none;" href="{% url 'about_page' %}">About Cook</a></h3>
+        <h3 style="grid-area: review;"><a style="color: white; text-decoration: none;" href="{% url 'review_page' %}">User Reviews</a></h3>
+
+    </div>
+    {%block content%}{%endblock%}
+    <div id="bottombar" style="background-color: #006b38ff; height: 120px; width: 100%; margin-top: 10px; display: grid;">
+        <img style="align-items: center; border-radius: 50%; height: 100px; width: 100px; grid-area: logo;" src="{% static '../static/website-logo.jpg' %}" alt="img">
+        <h4 style="align-items: center; color: aliceblue; display: inline-block; grid-area: copyright;">© Cook With Abhi 2021</h4>
+    </div>
+</body>
+</html>

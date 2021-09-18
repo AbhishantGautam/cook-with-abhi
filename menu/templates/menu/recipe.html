@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{recipe.title}}
+{% endblock %}
+
+{%block content%}
+    <h1>{{recipe.title}}</h1>
+    <div>
+        <img style="height: 300px; width: auto;" src="../../../media/{{recipe.header_image}}" alt="img">
+        <div>
+            <h4>{{recipe.ingredients}}</h4>
+        </div>
+
+        <div>
+            <h4>{{recipe.content}}</h4>
+        </div>
+
+        <div>
+            <h2>Next Up</h2>
+            <div>
+                
+                {% for item in selected_foods %}
+                <a href="{% url 'recipe_page' item.slug %}"><img style="width: 368.5px; height: 220px;" src="../../../media/{{item.header_image}}" alt="img"></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{%load static%}
+
+{% block title %}
+    About Cook
+{% endblock %}
+
+{%block css_link%}
+    <link rel="stylesheet" href="../../static/about_page/about_page.css">
+{%endblock%}
+
+{%block content%}
+    <div id="biodata" style="display: grid;">
+        <img style="grid-area: img; padding-right: 10px; padding-top: 20px;" src= "{% static '../static/about_page/photo.jpg' %}" alt="img">
+        <div>
+            <h1 style="grid-area: info;">Info</h1>
+            <ul>
+                <li>Name : Abhishant Gautam</li>
+                <li>Email : abhishantgautam10@gmail.com</li>
+                <li>Location : Chandigarh, India</li>
+                <li>Age : 23</li>
+            </ul>
+        </div>
+        <div style="grid-area: ed;">
+            <h1>Education history</h1>
+            <ul>
+                <li>Bachelor of Engineering from Panjab Univesity(Chandigarh) in Chemical Engineering</li>
+                <li>Senior Secondary Education from Bal Niketan School(Chandigarh)</li>
+                <li>Matriculation from Saupin's School(Chandigarh)</li>
+            </ul>
+        </div>
+        <div style="grid-area: work;">
+            <h1>Work experience</h1>
+            <ul>
+                <li>Intern at Panjab Chemicals and Crop Protection Ltd (JUNE'19 - July'19)</li>
+                <li>Intern at Indian Institiute of Chemical Engineers, IIChE (May'20 - June'20)</li>
+                <li>Intern at Rotaract Club Chandigarh (July'19 - August'19)</li>
+            </ul>
+        </div>
+        <div style="grid-area: hob;">
+            <h1>Hobbies</h1>
+            <ul>
+                <li>Cooking</li>
+                <li>Coding</li>
+                <li>Playing Badminton</li>
+                <li>Making Music</li>
+                <li>Watching Anime and Kdrama</li>
+            </ul>
+        </div>
+        <div style="grid-area: cook;">
+            <h1>About Cooking</h1>
+            <p>For me cooking is all about clearing up my mind and enjoying the process, while getting a tasty reward after the process😋</p>
+            <a style="color: white;" href="https://abhishantgautam.github.io/about-me/"><h2>Here's a link to my resume</h2></a>
+        </div>
+        <div class="socail_media" style="padding-bottom: 30px; grid-area: sm; position: relative; right: 400px;">
+            <h3>Follow me at:</h3>
+            <a href="https://facebook.com"><img style="height: 100px; width: 100px;" src="{% static '../static/about_page/facebook_logo.png' %}" alt="img"></a>
+            <a href="https://instagram.com"><img style="height: 100px; width: 100px;" src="{% static '../static/about_page/instagram_logo.png' %}" alt="img"></a>
+            <a href="https://twitter.com"><img style="height: 100px; width: 100px; border-radius: 50%;" src="{% static '../static/about_page/twitter_logo.png' %}" alt="img"></a>
+        </div>
+        
+    </div>
+{%endblock%}

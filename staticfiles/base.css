@@ -1,0 +1,47 @@
+.contact-me{    
+    text-align: right;
+    font-size: 12px;
+}
+
+
+body{
+    background-color: #101820FF;
+    color: white;
+    font-family: Oxygen Mono,monospace;
+}
+
+
+.toolbar{
+    background-color: #006B38FF;
+    grid-template-areas: 
+    "img not not home blogs menu aboutcook review";
+    align-items: center;
+}
+
+
+.toolbar h3:hover{
+    color: burlywood;
+}
+
+
+.toolbar img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    left: 0;
+}
+
+
+.toolbar h3{
+    color: lightgreen;
+    display: inline-block;
+    padding-left: 30px;
+    text-decoration: none;
+    right: 0;
+}
+
+#bottombar{
+    grid-template-areas: 
+    "logo copyright";
+}
+

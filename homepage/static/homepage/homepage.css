@@ -1,0 +1,62 @@
+.intro{
+    display: grid;
+    grid-template-areas: 
+        "head photos"
+        "head photos";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 1000px 1fr;
+    padding-top: 20px;
+}
+
+#quote{
+    grid-area: head;
+    position: relative;
+    bottom: 5px;
+    background-color: #006b38ff;
+}
+
+#quote-image{
+    grid-area: head;
+
+}
+
+#pics{
+    grid-area: photos;
+    display: grid;
+    grid-template-areas: 
+    "img1"
+    "img2";
+}
+
+
+#food{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    gap: 10px;
+}
+
+#blog{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    gap: 10px;
+}
+
+#individual_blog{
+    background-color: #006b38ff;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "summary"
+    "image";
+}
+
+#individual_recipe{
+    background-color: #006b38ff;
+}
+
+
+@media screen and (max-width:1391px) {
+    .picz{
+        display: none;
+    }
+}

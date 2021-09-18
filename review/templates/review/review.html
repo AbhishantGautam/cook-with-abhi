@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+    User Reviews
+{% endblock %}
+
+{%block content%}
+
+    {% for review in reviews %}
+        <div style="background-color: #006b38ff;">
+            <h1>{{review.text}}</h1>
+            <h1>By: {{review.username}}</h1>
+        </div>
+    {% endfor %}
+<br>
+<br>
+<br>
+
+
+    <h1>While you're here, Please leave a review 😄</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <br>
+        <h1>{{form.username.label_tag}}</h1>
+        {{form.username}}
+        <br>
+        <br>
+        <h1>{{form.text.label_tag}}</h1>
+        {{form.text}}
+        <button type="submit">Send</button>
+        </form>
+{%endblock%}
