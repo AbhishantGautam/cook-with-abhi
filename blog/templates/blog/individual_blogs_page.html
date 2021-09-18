@@ -7,7 +7,7 @@
 {%block content%}
     <h1>{{post.title}}</h1>
     <div>
-        <img style="height: 500px; width: auto;" src="{{post.blog_image.url}}" alt="img">
+        <img style="height: 500px; width: auto;" src="{{post.blog_image.url}}" alt="">
         <p>
             {{post.date}}
             <br>
@@ -25,7 +25,7 @@
         <h2>Next Up</h2>
         <div id="next_up" style="display: flex;">
             {% for post in selected_posts %}
-            <a style="display: inline-block;" href="{% url 'blog_detailpage' post.slug %}"><img style="width: 365px; height: 230px; grid-area: i; display: inline-block; padding-left: 10px;" src="{{post.blog_image.url}}" alt="img"></a>
+            <a style="display: inline-block;" href="{% url 'blog_detailpage' post.slug %}"><img style="width: 365px; height: 230px; grid-area: i; display: inline-block; padding-left: 10px;" src="{{post.blog_image.url}}" alt=""></a>
                 {{i.increment}}
             {% endfor %}
         </div>
